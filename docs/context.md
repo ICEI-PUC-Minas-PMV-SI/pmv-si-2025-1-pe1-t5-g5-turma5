@@ -1,12 +1,8 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
-
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
-
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
-
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
+O setor de serviços é um dos principais setores da economia brasileira, responsável por uma parcela importante dos empregos gerados no país em diversos ramos de atividades, tais como comércio, transporte, saúde, beleza, entre outros1. 
+A prestação de serviços ocorre quando um cliente paga pela execução de uma atividade, onde o ‘produto’ negociado é produzido e consumido simultaneamente. Diferente da venda de mercadorias, que podem se deteriorar e perder valor ao longo do tempo, os serviços prestados não estão ligados a uma determinada validade, mas sim à experiência do cliente1. 
+Dentre os principais desafios para quem presta serviços no Brasil estão a garantia da qualidade, satisfação dos clientes, precificação adequada, competição no mercado, dificuldade na previsão de demanda, etc1. Neste sentido, o projeto pretende apoiar este importante setor econômico, promovendo uma ferramenta capaz de auxiliar os prestadores na oferta, realização e avaliação dos serviços prestados. 
 
 ## Problema
 
