@@ -1,4 +1,4 @@
-### Introdução 
+## Introdução 
 
 O setor de serviços é um dos principais setores da economia brasileira, responsável por uma parcela importante dos empregos gerados no país em diversos ramos de atividades, tais como comércio, transporte, saúde, beleza, entre outros1. 
 
@@ -6,11 +6,11 @@ A prestação de serviços ocorre quando um cliente paga pela execução de uma 
 
 Dentre os principais desafios para quem presta serviços no Brasil estão a garantia da qualidade, satisfação dos clientes, precificação adequada, competição no mercado, dificuldade na previsão de demanda, etc1. Neste sentido, o projeto pretende apoiar este importante setor econômico, promovendo uma ferramenta capaz de auxiliar os prestadores na oferta, realização e avaliação dos serviços prestados. 
 
-### Problema
+## Problema
 
 Tendo em vista um problema frequente entre pessoas que buscam falar de serviços, que é encontrar profissionais de excelência sem uma referência devida de amigos ou familiares, o grupo organiza a oportunidade de criar uma aplicação capaz de oferecer um catálogo de discussão de serviços de forma simples e intuitiva
 
-### Objetivo Geral
+## Objetivo Geral
 
 Desenvolver uma aplicação web front end para ofertar um catálogo de prestadores de serviços.
 
@@ -21,11 +21,11 @@ Desenvolver uma aplicação web front end para ofertar um catálogo de prestador
 * Estabelecer as informações inseridas no cadastro dos usuários; 
 * Estabelecer os requisitos da aplicação. 
 
-### Justificativa 
+## Justificativa 
 
 Nesta aplicação, os clientes terão a opção de consultar múltiplos orçamentos entre diferentes prestadores. Embora existam opções de mercado com propostas semelhantes, há um consenso entre o grupo de que tais serviços não são amplamente conhecidos, e que há espaço para a criação, inovação e expansão de aplicações desta categoria. 
 
-### Público-alvo 
+## Público-alvo 
 
 O público-alvo deste projeto é composto por dois grupos de usuários, os clientes e os prestadores de serviços, cada qual com suas especificidades. 
 
