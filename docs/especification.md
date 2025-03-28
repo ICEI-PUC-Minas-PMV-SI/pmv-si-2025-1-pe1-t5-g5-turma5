@@ -66,7 +66,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-004| A aplicação deve permitir filtrar prestadores de serviços | ALTA |
 |RF-005| A aplicação deve permitir solicitar orçamentos de serviços | ALTA |
 |RF-006| A aplicação deve permitir calcular orçamento estimado para um serviço | MÉDIA |
-|RF-007| A aplicação deve permitir agendar a prestação de serviços | ALTA |
+|RF-007| A aplicação deve permitir agendar a prestação de serviços | MÉDIA |
 |RF-008| A aplicação deve permitir avaliar o prestador de serviços | ALTA |
 |RF-009| A aplicação deve permitir avaliar o cliente que contratou os serviços | ALTA |
 |RF-010| A aplicação deve permitir emitir relatório de avaliação de prestadores e clientes | MÉDIA |
@@ -77,7 +77,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| A aplicação deve ser do tipo web front end | ALTA | 
-|RNF-002| A aplicação deve ser desenvolvida em HTML e Javascript | ALTA |
+|RNF-002| A aplicação deve ser desenvolvida em HTML, Javascript e CSS | ALTA |
 |RNF-003| A aplicação deve ser disponibilizada em ambiente público na internet | ALTA |
 |RNF-004| A aplicação deve ser compatível com os principais navegadores do mercado (ex.: Chrome, Edge, Firefox) | ALTA |
 |RNF-005| A aplicação deve ser responsiva em diferentes dispositivos (ex.: computadores, tablets, smartphones) | MÉDIA |
@@ -91,5 +91,5 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|02| Não pode ser desenvolvido um módulo de back end       |
 
