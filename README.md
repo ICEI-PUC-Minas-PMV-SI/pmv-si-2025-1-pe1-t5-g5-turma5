@@ -11,7 +11,6 @@
 
 * Agner Pereira Lana
 * João Henrique Corrêa
-* Lucas Vinícius França Teles
 * Monique Alberice Guimaraes
 
 
