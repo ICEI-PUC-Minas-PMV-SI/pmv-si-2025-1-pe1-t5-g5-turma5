@@ -26,6 +26,19 @@ Defina os ícones que serão utilizados e suas respectivas funções.
 Apresente os estilos CSS criados para cada um dos elementos apresentados.
 Outras seções podem ser adicionadas neste documento para apresentar padrões de componentes, de menus, etc.
 
+![Iconografia Flaticon](https://github.com/user-attachments/assets/d1a07c02-6f7a-4a8b-8071-0b51626d00dd)
+
+Texto aqui
+
+![Iconografia Lineal Color Flaticon](https://github.com/user-attachments/assets/5e8ecfe3-cad4-46f4-8160-d740779eec57)
+
+
+## Logo
+
+Trata-se de um elemento gráfico que representa visualmente uma marca, produto ou serviço. Pode ser composta por letras, símbolos, números, imagens. Seu principal objetivo é transmitir a identidade visual da marca.
+
+![logo_CSG_laranja_f](https://github.com/user-attachments/assets/ad505003-d310-46d7-b423-d8d5bbf18c6d)
+
 
 > **Links Úteis**:
 >
