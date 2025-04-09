@@ -9,8 +9,7 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 
 ##### Fluxo de usuário do projeto
 
-![User Flow CSG](https://github.com/user-attachments/assets/8ee0b9a9-680c-4fcc-99a1-a72b3bead817)
-
+![User Flow CSG_](https://github.com/user-attachments/assets/237658ae-091d-4863-9859-0416ddcf9f3d)
 
 ## Wireframes
 
@@ -72,7 +71,8 @@ A tela de catálogo de prestadores será disponibilizada apenas para usuários d
 
 Ao clicar em determinado prestador no catálogo, será aberta um tela com um formulário para solicitação de orçamento, onde o cliente descreva um resumo das suas necessidades para que o prestador possa definir se consegue ou não atender à solicitação.
 
-![Solicitacao Orcamento](https://github.com/user-attachments/assets/d3be99fe-8963-471b-a497-88548df525cd)
+![Solicitacao Orcamento_](https://github.com/user-attachments/assets/c2032484-438e-4984-89e9-df752ed76c84)
+
 
 #### Sobre as telas do sistema
 
