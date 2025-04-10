@@ -1,42 +1,28 @@
 # Template padrão do site
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
-
-Explique as guias de estilo utilizadas no seu projeto.
-
-cores
-#1E3A8A
-#30CFD0
-
-#F97316
-#F83600
-
-#FBFBFB
-
-#FFFFFF
-
-#000000
-
-tamanhos
-24, 20, 16, 12
-
+Esta sessão apresenta o layout padrão que será utilizado em todas as páginas da aplicação. Abaixo são apresentados detalhes como a paleta de cores, tipografia, iconografia, entre outros. Tratam-se dos elementos que definem a identidade visual da página, que será construída em HTML e CSS como requisito do projeto.
 
 ## Design
 
 Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
 
 
+
 ## Cores
 
-Apresente a paleta de cores que será utilizada. Uma ferramenta interessante para a criação de palestas de cores é o *Adobe Color* ([https://color.adobe.com/pt/create/color-wheel](https://color.adobe.com/pt/create/color-wheel)).
+Cores utilizadas: #1E3A8A, #30CFD0, #F97316, #F83600, #E5E5E5, #000000
 
+![paleta_cores](https://github.com/user-attachments/assets/a8a7ba9d-813b-493b-b370-bb05e22e00c0)
 
 ## Tipografia
 
 A aplicação utilizará como padrão a fonte **Inter**, do Google Fonts. Trata-se de uma fonte otimizada para uso em telas, altamente legível, que suporta diversos idiomas e scripts e é compatível com a maioria dos navegadores e plataformas. As variações apresentadas serão utilizadas nos títulos de pagina, de seção, cabeçalhos, rodapés e conteúdos.
 
-![tipografia](https://github.com/user-attachments/assets/542040cc-93af-432a-94a9-b908c03e8e80)
+**Fonte**: Inter (Google Fonts)
 
+**Tamanhos**: 24, 20, 16, 12
+
+![tipografia](https://github.com/user-attachments/assets/542040cc-93af-432a-94a9-b908c03e8e80)
 
 ## Iconografia
 
