@@ -4,9 +4,19 @@ Esta sessão apresenta o layout padrão que será utilizado em todas as páginas
 
 ## Design
 
-Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
+### Layout Padrão
 
+Abaixo segue o layout padrão da página inicial, que deve conter um cabeçalho, com a logo posicionada à esquerda do mesmo e botões de login e tutorial à direita. Na lateral esquerda da tela haverá um menu com as categorias de serviços oferecidas pelo site, juntamente com links para conteúdos institucionais. Ao centro haverá conteúdos sobre a empresa, o setor de serviços, entre outros. Por fim, ao final da página haverá um rodapé com links para as redes sociais da empresa.
 
+#### Página inicial
+
+![template padrão_home](https://github.com/user-attachments/assets/3aff6aa6-b5cf-4d64-8c30-07534a86c3b2)
+
+A página de login, assim como as páginas de cadastro manterão o padrão da página inicial, mas sem apresentar o menu lateral esquerdo. 
+
+#### Página de login
+
+![template padrão_login](https://github.com/user-attachments/assets/118f9ce3-ef06-4e51-b06f-aa0fa6adbcb8)
 
 ## Cores
 
@@ -44,11 +54,3 @@ Trata-se de um elemento gráfico que representa visualmente uma marca, produto o
 
 ![logo_CSG_laranja_f_](https://github.com/user-attachments/assets/c20f7717-b17d-4b71-825f-5f5d2c6a8ae4)
 
-
-> **Links Úteis**:
->
-> -  [Como criar um guia de estilo de design da Web](https://edrodrigues.com.br/blog/como-criar-um-guia-de-estilo-de-design-da-web/#)
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
