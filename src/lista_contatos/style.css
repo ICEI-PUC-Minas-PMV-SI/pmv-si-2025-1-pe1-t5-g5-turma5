@@ -8,7 +8,7 @@ label {
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:  orangered !important;
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
     color:  orangered !important;
     opacity:  3;
  }
