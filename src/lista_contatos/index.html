@@ -1,1 +1,239 @@
-Inserir o código aqui
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catálogo de Serviços Gerais</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="init()">
+    <h1><b>Prestadores de Serviços</b></h1>
+
+    <div class="container">
+        <div class="row">
+            <div id="msg" class="col-sm-10 offset-sm-1 ">
+                <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+            </div>
+        </div>
+
+        <form id="form-contato">
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="inputId">ID</label>
+                    <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                </div>
+                <div class="col-sm-8">
+                    <label for="inputNome">Nome completo (*)</label>
+                    <input type="text" class="form-control" id="inputNome" required
+                        placeholder="Nome completo">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label for="inputTelefone">Celular (*)</label>
+                    <input type="text" class="form-control" id="inputTelefone" required 
+                        placeholder="(00) 00000-0000">
+                </div>
+                <div class="col-sm-7">
+                    <label for="inputEmail">E-mail (*)</label>
+                    <input type="email" class="form-control" id="inputEmail" required 
+                        placeholder="Informe o e-mail">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="inputCidade">Cidade (*)</label>
+                    <input type="text" class="form-control" id="inputCidade" 
+                        placeholder="Informe a cidade">
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputOcupacao">Ocupação (*)</label>
+                    <input type="text" class="form-control" id="inputOcupacao" required
+                        placeholder="Pintor, marceneiro, eletricista, faxineira, babá...">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <label for="inputTipo">Tipo de Serviço (*)</label>
+                    <input type="text" class="form-control" id="inputTipo" required 
+                    placeholder="Reformas, Limpeza e conservação, Serviços domésticos, Outros serviços">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <small>(*) Campos obrigatórios</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+                    <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+                    <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+                    <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
+                    <a href="lista_contatos.html"><input type="button" class="btn btn-warning" id="btnClear"
+                            value="Pesquisar Contatos"></a>
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="grid-contatos" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Prestador(a)</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Cidade</th>
+                            <th scope="col">Ocupação</th>
+                            <th scope="col">Tipo de Serviço</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-contatos">
+                        <tr>
+                            <td scope="row">1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        function exibeContatos() {
+            let contatos =  db.contatos
+
+            // Remove todas as linhas do corpo da tabela
+            $("#table-contatos").html("")
+
+            // Popula a tabela com os registros do banco de dados
+            for (i = 0; i < contatos.length; i++) {
+                let contato = contatos[i]
+                $("#table-contatos").append(`<tr><td scope="row">${contato.id}</td>
+                                                <td>${contato.nome}</td>
+                                                <td>${contato.celular}</td>
+                                                <td>${contato.email}</td>
+                                                <td>${contato.cidade}</td>
+                                                <td>${contato.ocupacao}</td>
+                                                <td>${contato.tipo}</td>
+                                            </tr>`)
+            }
+        }
+
+        function init() {
+            // Adiciona funções para tratar os eventos 
+            $("#btnInsert").click(function () {
+                // Verfica se o formulário está preenchido corretamente
+                if (!$('#form-contato')[0].checkValidity()) {
+                    displayMessage("Preencha o formulário corretamente.");
+                    return;
+                }
+
+                // Cria contato a partir dos valores dos campos do formulário
+                let contato = {
+                    nome: $("#inputNome").val(),
+                    celular: $("#inputCelular").val(),
+                    email: $("#inputEmail").val(),
+                    cidade: $("#inputCidade").val(),
+                    ocupacao: $("#inputOcupacao").val(),
+                    tipo: $('#inputTipo').val()
+                };
+
+                insertContato(contato);
+
+                // Reexibe os contatos
+                exibeContatos();
+
+                // Limpa o formulario
+                $("#form-contato")[0].reset();
+            });
+
+            // Intercepta o click do botão Alterar
+            $("#btnUpdate").click(function () {
+                // Obtem os valores dos campos do formulário
+                if (!$("#inputId").val()) {
+                    displayMessage("Selecione um contato para ser alterado.");
+                    return;
+                }
+                let campoId = parseInt($("#inputId").val())
+
+                let contato = {
+                    id: campoId,
+                    nome: $("#inputNome").val(),
+                    celular: $("#inputCelular").val(),
+                    email: $("#inputEmail").val(),
+                    cidade: $("#inputCidade").val(),
+                    ocupacao: $("#inputOcupacao").val(),
+                    tipo: $('#inputTipo').val()
+                };
+
+                updateContato(parseInt(campoId), contato);
+
+                // Reexibe os contatos
+                exibeContatos();
+
+                // Limpa o formulario
+                $("#form-contato")[0].reset();
+            });
+
+            // Intercepta o click do botão Excluir
+            $("#btnDelete").click(function () {
+                let campoId = $("#inputId").val();
+                if (campoId == "") {
+                    displayMessage("Selecione um contato a ser excluído.");
+                    return;
+                }
+                deleteContato(parseInt(campoId));
+
+                // Reexibe os contatos
+                exibeContatos();
+
+                // Limpa o formulario
+                $("#form-contato")[0].reset();
+            });
+
+            // Intercepta o click do botão Listar Contatos
+            $("#btnClear").click(function () {
+                $("#form-contato")[0].reset();
+            });
+
+            // Oculta a mensagem de aviso após alguns segundos
+            $('#msg').bind("DOMSubtreeModified", function () {
+                window.setTimeout(() => {
+                    $(".alert").fadeTo(500, 0).slideUp(500)
+                }, 5000);
+            });
+
+            // Preenche o formulário quando o usuario clicar em uma linha da tabela 
+            $("#grid-contatos").on("click", 'tr', (evento) => {
+                let linhaContato = evento.currentTarget;
+                colunas = linhaContato.querySelectorAll("td");
+
+                $("#inputId").val(colunas[0].innerText);
+                $("#inputNome").val(colunas[1].innerText);
+                $("#inputCelular").val(colunas[2].innerText);
+                $("#inputEmail").val(colunas[3].innerText);
+                $("#inputCidade").val(colunas[4].innerText);
+                $("#inputOcupacao").val(colunas[5].innerText);
+                $("#inputTipo").val(colunas[6].innerText);
+            });
+
+            exibeContatos();
+        }
+    </script>
+</body>
+
+</html>
