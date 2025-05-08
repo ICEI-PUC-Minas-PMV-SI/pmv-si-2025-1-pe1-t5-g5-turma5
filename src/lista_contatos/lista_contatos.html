@@ -1,1 +1,274 @@
 Inserir o código aqui
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Contatos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">    
+</head>
+
+<body>
+    <h1>Listagem de Contatos</h1>
+
+    <div class="container">
+        <div class="row">
+            <div id="msg" class="col-sm-10 offset-sm-1 ">
+                <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="msg" class="col-sm-2 offset-sm-10 ">
+                <a href="index.html"><input type="button" class="btn btn-warning" id="btnClear" value="Cadastro"></a>
+            </div>
+        </div>        
+       
+        <form id="form-contato">            
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <select name="filtro_cidade" id="filtro_cidade" onchange="ListaContatos()" class="form-control">
+                        <option value="">Selecione a Cidade</option>
+                        <option value="Betim">Betim</option>
+                        <option value="Belo Horizonte">Belo Horizonte</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Goiânia">Goiânia</option>
+                    </select>                    
+                </div>
+                <div class="col-sm-8">
+                    <select name="filtro_categoria" id="filtro_categoria" onchange="ListaContatos()"  class="form-control">
+                        <option value="">Selecione a Categoria</option>
+                        <option value="Reformas">Reformas</option>
+                        <option value="Limpeza">Limpeza e conservação</option>
+                        <option value="Domesticos">Serviços domésticos</option>
+                        <option value="Outros">Outros serviços</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="grid-contatos" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Cidade</th>
+                            <th scope="col">Ocupação</th>
+                            <th scope="col">Tipo de Serviço</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-contatos">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // função para listar na tabela os contatos que estão associados aos filtros
+        function ListaContatos() {
+            let contatos =  db.contatos
+           
+            // Obtem os dados informados pelo usuário nos filtros
+            let fc = document.getElementById('filtro_cidade').value;
+            let fcg = document.getElementById('filtro_categoria').value;
+
+            // limpa a lista de contatos apresentados
+            $("#table-contatos").empty();
+
+            // Popula a tabela com os registros do banco de dados
+            for (let index = 0; index < contatos.length; index++) {
+                const contato = contatos[index];
+
+                // Verifica se os dados do contato batem com os filtros
+                if (((contato.cidade == fc) || (fc == '')) &&
+                    ((contato.categoria == fcg) || (fcg == ''))) {
+                   
+                    // Inclui o contato na tabela    
+                    $("#table-contatos").append(`<tr><td scope="row">${contato.id}</td>
+                                                    <td>${contato.nome}</td>
+                                                    <td>${contato.telefone}</td>
+                                                    <td>${contato.email}</td>
+                                                    <td>${contato.cidade}</td>
+                                                    <td>${contato.ocupacao}</td>
+                                                    <td>${contato.tipo}</td>
+                                                </tr>`);
+                }
+            }
+
+        }
+
+
+        window.onload = () => {
+            ListaContatos()
+        }
+    </script>
+
+</body>
+
+</html>
+
+para finalizar, clique em Commit Changes
+
+
+
+quando aparecer a tela abaixo, não precisa mudar nada, basta apertar Commit changes novamente
+
+
+
+
+
+
+Repita novamente o processo acima para o link e código abaixo
+
+https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g5-turma5/blob/main/src/login/login.js
+
+
+insira o código abaixo
+
+// Página inicial de Login
+const LOGIN_URL = "login.html";
+
+// Objeto para o banco de dados de usuários baseado em JSON
+var db_usuarios = {};
+
+// Objeto para o usuário corrente
+var usuarioCorrente = {};
+
+function generateUUID() { // Public Domain/MIT
+    var d = new Date().getTime();//Timestamp
+    var d2 = (performance && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16;//random number between 0 and 16
+        if(d > 0){//Use timestamp until depleted
+            r = (d + r)%16 | 0;
+            d = Math.floor(d/16);
+        } else {//Use microseconds since page-load if supported
+            r = (d2 + r)%16 | 0;
+            d2 = Math.floor(d2/16);
+        }
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+}
+
+// Dados de usuários para serem utilizados como carga inicial
+const dadosIniciais = {
+    usuarios: [
+        { "id": generateUUID (),
+            "login": "admin",
+            "senha": "123",
+            "nome": "Administrador do Sistem_",
+            "email": "admin@abc.com",
+            "celular": "123321",
+            "nascimento": "01/01/1990"},
+        { "id": generateUUID (),
+            "login": "user",
+            "senha": "123",
+            "nome": "Usuario Comum",
+            "email": "user@abc.com",
+            "celular": "321156",
+            "nascimento": "12/12/1995"},
+    ]
+};
+
+// Inicializa o usuarioCorrente e banco de dados de usuários da aplicação de Login
+function initLoginApp () {
+    // PARTE 1 - INICIALIZA USUARIOCORRENTE A PARTIR DE DADOS NO LOCAL STORAGE, CASO EXISTA
+    usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    if (usuarioCorrenteJSON) {
+        usuarioCorrente = JSON.parse (usuarioCorrenteJSON);
+    }
+   
+    // PARTE 2 - INICIALIZA BANCO DE DADOS DE USUÁRIOS
+    // Obtem a string JSON com os dados de usuários a partir do localStorage
+    var usuariosJSON = localStorage.getItem('db_usuarios');
+
+    // Verifica se existem dados já armazenados no localStorage
+    if (!usuariosJSON) {  // Se NÃO há dados no localStorage
+       
+        // Informa sobre localStorage vazio e e que serão carregados os dados iniciais
+        alert('Dados de usuários não encontrados no localStorage. \n -----> Fazendo carga inicial.');
+
+        // Copia os dados iniciais para o banco de dados
+        db_usuarios = dadosIniciais;
+
+        // Salva os dados iniciais no local Storage convertendo-os para string antes
+        localStorage.setItem('db_usuarios', JSON.stringify (dadosIniciais));
+    }
+    else  {  // Se há dados no localStorage
+       
+        // Converte a string JSON em objeto colocando no banco de dados baseado em JSON
+        db_usuarios = JSON.parse(usuariosJSON);    
+    }
+};
+
+// Verifica se o login do usuário está ok e, se positivo, direciona para a página inicial
+function loginUser (login, senha) {
+   
+    // Verifica todos os itens do banco de dados de usuarios
+    // para localizar o usuário informado no formulario de login
+    for (var i = 0; i < db_usuarios.usuarios.length; i++) {
+        var usuario = db_usuarios.usuarios[i];
+       
+        // Se encontrou login, carrega usuário corrente e salva no Session Storage
+        if (login == usuario.login && senha == usuario.senha) {
+            usuarioCorrente.id = usuario.id;
+            usuarioCorrente.login = usuario.login;
+            usuarioCorrente.email = usuario.email;
+            usuarioCorrente.nome = usuario.nome;
+           
+            // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
+            sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
+
+            // Retorna true para usuário encontrado
+            return true;
+        }
+    }
+
+    // Se chegou até aqui é por que não encontrou o usuário e retorna falso
+    return false;
+}
+
+// Apaga os dados do usuário corrente no sessionStorage
+function logoutUser () {
+    usuarioCorrente = {};
+    sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
+    window.location = LOGIN_URL;
+}
+
+function addUser (nome, login, senha, email, celular, nascimento) {
+   
+    // Cria um objeto de usuario para o novo usuario
+    let newId = generateUUID ();
+    let usuario = { "id": newId,
+                    "login": login,
+                    "senha": senha,
+                    "nome": nome,
+                    "email": email ,
+                    "celular": celular,
+                    "nascimento": nascimento};
+   
+    // Inclui o novo usuario no banco de dados baseado em JSON
+    db_usuarios.usuarios.push (usuario);
+
+    // Salva o novo banco de dados com o novo usuário no localStorage
+    localStorage.setItem('db_usuarios', JSON.stringify (db_usuarios));
+}
+
+function setUserPass () {
+
+}
+
+// Inicializa as estruturas utilizadas pelo LoginApp
+initLoginApp ();
