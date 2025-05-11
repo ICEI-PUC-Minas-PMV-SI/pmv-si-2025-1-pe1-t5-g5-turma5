@@ -5,46 +5,46 @@ var db_contatos_inicial = {
             "id": 11,
             "nome": "João Paulo",
             "cidade": "Belo Horizonte",
-            "categoria": "Reformas",
+            "tipo": "Reformas",
             "email": "joaojp@csg.com.br",
-            "telefone": "1-770-736-8031",
-            "website": "Marceneiro"
+            "celular": "1-770-736-8031",
+            "ocupacao": "Marceneiro"
         },
         {
             "id": 12,
             "nome": "Maria Silva",
             "cidade": "Betim",
-            "categoria": "Limpeza e conservação",
+            "tipo": "Limpeza e conservação",
             "email": "mariasilva@csg.com.br",
-            "telefone": "010-692-6593",
-            "website": "Diarista"
+            "celular": "010-692-6593",
+            "ocupacao": "Diarista"
         },
         {
             "id": 13,
             "nome": "Regina Santos",
             "cidade": "Contagem",
-            "categoria": "Serviços domésticos",
+            "tipo": "Serviços domésticos",
             "email": "regisantos@csg.com.br",
-            "telefone": "1-463-123-4447",
-            "website": "Babá"
+            "celular": "1-463-123-4447",
+            "ocupacao": "Babá"
         },
         {
             "id": 14,
             "nome": "José Carlos",
             "cidade": "Belo Horizonte",
-            "categoria": "Outros serviços",
+            "tipo": "Outros serviços",
             "email": "jcpersonal@csg.com.br",
-            "telefone": "493-170-9623 x156",
-            "website": "Personal Trainner"
+            "celular": "493-170-9623 x156",
+            "ocupacao": "Personal Trainner"
         },
         {
             "id": 15,
             "nome": "Carlos Eduardo",
             "cidade": "Contagem",
-            "categoria": "Reformas",
+            "tipo": "Reformas",
             "email": "cadu@csg.com.br",
-            "telefone": "024-648-3804",
-            "website": "Pintor"
+            "celular": "024-648-3804",
+            "ocupacao": "Pintor"
         }
     ]
 }
@@ -69,10 +69,10 @@ function insertContato(contato) {
         "id": novoId,
         "nome": contato.nome,
         "email" : contato.email,
-        "telefone": contato.telefone,
+        "celular": contato.celular,
         "cidade" : contato.cidade,
-        "categoria": contato.categoria,
-        "website": contato.website
+        "tipo": contato.tipo,
+        "ocupacao": contato.ocupacao
     };
 
     // Insere o novo objeto no array
@@ -90,10 +90,10 @@ function updateContato(id, contato) {
     // Altera os dados do objeto no array
     db.contatos[index].nome = contato.nome,
     db.contatos[index].email = contato.email,
-    db.contatos[index].telefone = contato.telefone,
+    db.contatos[index].celular = contato.celular,
     db.contatos[index].cidade = contato.cidade,
-    db.contatos[index].categoria = contato.categoria,
-    db.contatos[index].website = contato.website
+    db.contatos[index].tipo = contato.tipo,
+    db.contatos[index].ocupacao = contato.ocupacao
 
     displayMessage("Contato alterado com sucesso");
 
