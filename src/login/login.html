@@ -9,21 +9,32 @@
 </head>
 
 <body>
-	<div id="login">
+    <header id="cabecalho" class="container-fluid">
+        <link rel="stylesheet" href="style.css">
+        <div class="row">
+            <div class="col-md-12">
+                <img id="logo" width="180" height="113" src="imgs/logo.png">
+                <button id="btnh" type="button" class="btn btn-lg">Passo a Passo</button>
+                <button id="btnh" type="button" class="btn btn-lg">Entrar / Cadastrar</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="login">
 		<h3 class="text-center text-white pt-5">Novo Usuário</h3>
-		<div class="container">
+		<div class="container col-md-8">
 			<div id="login-row" class="row justify-content-center align-items-center">
 				<div id="login-column" class="col-md-6">
 					<div id="login-box" class="col-md-12">
 						<form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
-							<h3 class="text-center text-info">Faça login para continuar</h3>
+<!--							<h3 class="text-center text-info">Faça login para continuar</h3>-->
 							<div class="form-group">
-								<label for="username" class="text-info">Usuário</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
+								<label for="username" class="text-info"><b>Usuário</b></label><br>
+                                <input type="text" name="username" id="username" class="form-control" placeholder="Usuário">
                             </div>
                             <div class="form-group">
-                                <label for="password" class="text-info">Senha</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
+                                <label for="password" class="text-info"><b>Senha</b></label><br>
+                                <input type="text" name="password" id="password" class="form-control" placeholder="Senha">
                             </div>
                             <div class="form-group text-right">                                
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="Entrar">
@@ -33,8 +44,8 @@
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">Não tenho cadastro!</button>
                 </div>
             </div>
-        </div>
-    </div>    
+        </div>  
+    </div>
 
   <!-- Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -146,6 +157,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+
 </body>
 
 </html>
