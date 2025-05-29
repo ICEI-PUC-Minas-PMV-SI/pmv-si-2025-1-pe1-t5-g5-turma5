@@ -1,0 +1,2 @@
+Imagens utilizadas nas páginas.
+
