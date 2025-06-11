@@ -2,7 +2,7 @@
 
 ## Introdução 
 
-O setor de serviços é um dos principais setores da economia brasileira, responsável por uma parcela importante dos empregos gerados no país em diversos ramos de atividades, tais como comércio, transporte, saúde, beleza, entre outros1. 
+O setor de serviços é um dos principais setores da economia brasileira, responsável por uma parcela importante dos empregos gerados no país em diversos ramos de atividades, tais como comércio, transporte, saúde, beleza, entre outros. 
 
 A prestação de serviços ocorre quando um cliente paga pela execução de uma atividade, onde o ‘produto’ negociado é produzido e consumido simultaneamente. Diferente da venda de mercadorias, que podem se deteriorar e perder valor ao longo do tempo, os serviços prestados não estão ligados a uma determinada validade, mas sim à experiência do cliente1. 
 
