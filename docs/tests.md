@@ -29,15 +29,15 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
  :--------------: | ------------
 **Procedimento**  | 1) Acesse o endereço do site 2) Clique em Entrar/Cadastrar 3) Na tela de login, acesse o link "Ainda não se cadastrou? Cadastre-se 4) Na tela de cadastro de usuários selecione Cliente, preencha os dados pessoais, selecione "Concordo com os termos e política de privacidade" e escolha quais tipos de serviço você procura 5) Clique em cadastrar
 **Requisitos associados** | RF-001
-**Resultado esperado** | Proseguir para a tela de Termos de Uso e Política de Privacidade
+**Resultado esperado** | Proseguir para a tela de Prestadores de Serviços
 **Dados de entrada** | Inserção de dados válidos no formulário de cadastro
 **Resultado obtido** | Sucesso
 
-**Caso de Teste** | **CT02 - Criar conta parte 2**
+**Caso de Teste** | **CT02 - Criar cadastro de usuário do tipo Prestador de Serviço**
  :--------------: | ------------
-**Procedimento**  | 1) Preencha todos os campos do formulário <br> 2) Clique no botão "Criar conta" <br> 
+**Procedimento**  | 1) Acesse o endereço do site 2) Clique em Entrar/Cadastrar 3) Na tela de login, acesse o link "Ainda não se cadastrou? Cadastre-se 4) Na tela de cadastro de usuários selecione Prestador de Serviços, preencha os dados pessoais, selecione "Concordo com os termos e política de privacidade" e escolha quais tipos de serviço você oferece 5) Clique em cadastrar 6) Na tela de descrição de informações sobre os serviços que você oferece, descreva o serviço, o valor estimado por hora e o tempo médio estimado em horas 
 **Requisitos associados** | RF-001
-**Resultado esperado** | Usuário cadastrado
+**Resultado esperado** | Usuário Cadastrado
 **Dados de entrada** | Inserção de dados válidos no formulário de cadastro
 **Resultado obtido** | Sucesso
 
