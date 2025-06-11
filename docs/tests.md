@@ -27,9 +27,9 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 
 **Caso de Teste** | **CT01 - Criar cadastro de usuário do tipo Cliente**
  :--------------: | ------------
-**Procedimento**  | 1) Acesse o endereço do site 2) Clique em Entrar/Cadastrar 3) Preencha todos os campos do formulário <br> 3) Clique no botão "Continuar".
+**Procedimento**  | 1) Acesse o endereço do site 2) Clique em Entrar/Cadastrar 3) Na tela de login, acesse o link "Ainda não se cadastrou? Cadastre-se 4) Na tela de cadastro de usuários selecione Cliente, preencha os dados pessoais, selecione "Concordo com os termos e política de privacidade" e escolha quais tipos de serviço você procura 5) Clique em cadastrar
 **Requisitos associados** | RF-001
-**Resultado esperado** | Prosseguir para a parte 2 do cadastro
+**Resultado esperado** | Proseguir para a tela de Termos de Uso e Política de Privacidade
 **Dados de entrada** | Inserção de dados válidos no formulário de cadastro
 **Resultado obtido** | Sucesso
 
