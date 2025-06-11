@@ -24,7 +24,6 @@ Nesta seção o grupo deverá documentar os testes de software que verificam a c
 
 Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe qual o Requisito Funcional ou não funcional que ele está verificando. Associe também a página (ou artefato) onde o teste será realizado e descreva o cenário do teste. Veja a tabela de exemplo.
 
-
 **Caso de Teste** | **CT01 - Criar cadastro de usuário do tipo Cliente**
  :--------------: | ------------
 **Procedimento**  | 1) Acesse o endereço do site 2) Clique em Entrar/Cadastrar 3) Na tela de login, acesse o link "Ainda não se cadastrou? Cadastre-se 4) Na tela de cadastro de usuários selecione Cliente, preencha os dados pessoais, selecione "Concordo com os termos e política de privacidade" e escolha quais tipos de serviço você procura 5) Clique em cadastrar
@@ -38,6 +37,14 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Procedimento**  | 1) Acesse o endereço do site 2) Clique em Entrar/Cadastrar 3) Na tela de login, acesse o link "Ainda não se cadastrou? Cadastre-se 4) Na tela de cadastro de usuários selecione Prestador de Serviços, preencha os dados pessoais, selecione "Concordo com os termos e política de privacidade" e escolha quais tipos de serviço você oferece 5) Clique em cadastrar 6) Na tela de descrição de informações sobre os serviços que você oferece, descreva o serviço, o valor estimado por hora e o tempo médio estimado em horas 
 **Requisitos associados** | RF-001
 **Resultado esperado** | Usuário Cadastrado
+**Dados de entrada** | Inserção de dados válidos no formulário de cadastro
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT03 - Logar no link Entrar/Cadastrar com o perfil de Cliente**
+ :--------------: | ------------
+**Procedimento**  | 1) Acesse o endereço do site 2) Clique em Entrar/Cadastrar 3) Na tela de login, insira o seu e-mail e a sua senha 4)Clique em entrar    
+**Requisitos associados** | RF-001
+**Resultado esperado** | Prosseguir para a tela de Prestadores de Serviços
 **Dados de entrada** | Inserção de dados válidos no formulário de cadastro
 **Resultado obtido** | Sucesso
 
