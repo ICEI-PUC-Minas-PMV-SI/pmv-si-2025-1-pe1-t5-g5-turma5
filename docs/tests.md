@@ -45,7 +45,7 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Procedimento**  | 1) Acesse o endereço do site 2) Clique em Entrar/Cadastrar 3) Na tela de login, insira o seu e-mail e a sua senha 4)Clique em entrar    
 **Requisitos associados** | RF-001
 **Resultado esperado** | Prosseguir para a tela de Prestadores de Serviços
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro
+**Dados de entrada** | Inserção de dados válidos no formulário de login
 **Resultado obtido** | Sucesso
 
 ## Registro dos Testes de Software
