@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSG - Página inicial</title>
+    <link rel="stylesheet" href="/index/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
+    <style>
+        * {font-family: "Inter", sans-serif;}
+    </style>
+
+</head>
+
+<body>
+
+<header class="cabecalho">
+    <div class="logo">
+        <a href="/index/content/home.html">
+        <img id="logo" width="180" height="113" src="/index/imgs/logo.png">
+        </a>
+    </div>
+    <div class="botoes">
+        <button id="btncab1" type="button" class="btn" onclick="document.location='/index/content/tutorial.html'">Passo a passo</button>
+        <button id="btncab2" type="button" class="btn" onclick="document.location='/index/login/login.html'">Entrar/Cadastrar</button>
+    </div>
+</header>
+
+<main class="home-content">
+    <div class="menu_lateral">
+        <aside id="menu">
+            <button class="btnlat" id="btnlat1" type="button" class="btn">
+            <img id="icn_lat" width="35" height="35" src="/index/imgs/icn_reformas.png">
+                Reformas
+            </button>
+            <button class="btnlat" id="btnlat2" type="button" class="btn">
+            <img id="icn_lat" width="35" height="35" src="/index/imgs/icn_limpeza.png">
+                Limpeza e conservação
+            </button>
+            <button class="btnlat" id="btnlat3" type="button" class="btn">
+            <img id="icn_lat" width="35" height="35" src="/index/imgs/icn_servicos.png">
+                Serviços domésticos
+            </button>
+            <button class="btnlat" id="btnlat4" type="button" class="btn">
+            <img id="icn_lat" width="35" height="35" src="/index/imgs/icn_outros.png">
+                Outros serviços
+            </button>
+        </aside>
+        <div id="institucional"> 
+            <h3>Institucional</h3>
+            <p>Quem somos?</p>
+            <p>Fale conosco</p>
+            <p><a href="/index/content/termos.html">Termos de uso</a></p>
+            <p><a href="/index/content/termos.html">Política de privacidade</a></p>
+        </div>
+    </div>
+    <div class="home-wrapper">
+    <h2>Olá <span id="nomeUsuario"></span>, seja bem-vindo(a)!</h2>
+
+    </div>
+
+</main>
+
+<footer class="rodape">
+    <div class="icn_rodape">
+        <a href="https://www.instagram.com/" target="_blank">
+        <img id="icnrod1" width="35" height="35" src="/index/imgs/instagram_icn.png">
+        </a>
+        <a href="https://br.linkedin.com/" target="_blank">
+        <img id="icnrod2" width="35" height="35" src="/index/imgs/linkedin_icn.png">
+        </a>
+        <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g5-turma5/tree/main" target="_blank">
+        <img id="icnrod3" width="35" height="35" src="/index/imgs/github_icn.png">
+        </a>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+</body>
+
+</html>
