@@ -8,7 +8,7 @@
     <title>CSG - Catálogo de Prestadores</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 <!--    <link rel="stylesheet" href="style_.css">   -->
-    <link rel="stylesheet" href="/src/index/style.css">
+    <link rel="stylesheet" href="/index/style.css">
     <style>
         * {font-family: "Inter", sans-serif;}
     </style>
@@ -55,20 +55,18 @@
 
 <!-- FINAL DO TESTE -->
 
-
-
 </head>
 
 <body>
 
 <header class="cabecalho">
     <div class="logo">
-        <a href="/src/index/content/home.html">
-        <img id="logo" width="180" height="113" src="/src/index/imgs/logo.png">
+        <a href="/index/content/home.html">
+        <img id="logo" width="180" height="113" src="/index/imgs/logo.png">
         </a>
     </div>
     <div class="botoes">
-        <button id="btncab1" type="button" class="btn" onclick="document.location='/src/index/content/tutorial.html'">Passo a passo</button>
+        <button id="btncab1" type="button" class="btn" onclick="document.location='/index/content/tutorial.html'">Passo a passo</button>
 <!--        <button id="btncab2" type="button" class="btn" onclick="document.location='login.html'">Entrar/Cadastrar</button> -->
         <button id="btn_logout">SAIR</button>
     </div>
@@ -94,29 +92,63 @@
             </div>
         </div>        
 -->
-        <form id="form-contato">            
-            <div class="form-group row">
-                <div class="col-sm-4">
+
+
+        <form id="form-lista">            
+            <div>
+                <div class="filtro-lista">
                     <select name="filtro_cidade" id="filtro_cidade" onchange="ListaContatos()" class="form-control">
-                        <option value="">Selecione a Cidade</option>
-                        <option value="Betim">Betim</option>
+                        <option value="">-- Selecione uma cidade --</option>
                         <option value="Belo Horizonte">Belo Horizonte</option>
-                        <option value="Rio de Janeiro">Rio de Janeiro</option>
-                        <option value="São Paulo">São Paulo</option>
-                    </select>                    
+                        <option value="Contagem">Contagem</option>
+                        <option value="Betim">Betim</option>
+                        <option value="Esmeraldas">Esmeraldas</option>
+                        <option value="Ibirité">Ibirité</option>
+                        <option value="Itaúna">Itaúna</option>
+                        <option value="Lagoa Santa">Lagoa Santa</option>
+                        <option value="Nova Lima">Nova Lima</option>
+                        <option value="Pará de Minas">Pará de Minas</option>
+                        <option value="Ribeirão das Neves">Ribeirão das Neves</option>
+                        <option value="Santa Luzia">Santa Luzia</option>
+                        <option value="Sete Lagoas">Sete Lagoas</option>
+                        <option value="Vespasiano">Vespasiano</option>
+                        <option value="Outros da Grande BH">Outros da Grande BH</option>
+                        <option value="Outros de MG">Outros de MG</option>
+                        <option value="Outros Estados">Outros Estados</option>
+                    </select>
                 </div>
-                <div class="col-sm-8">
-                    <select name="filtro_categoria" id="filtro_categoria" onchange="ListaContatos()"  class="form-control">
-                        <option value="">Selecione a Categoria</option>
-                        <option value="reformas">Reformas</option>
-                        <option value="limpeza">Limpeza e conservação</option>
-                        <option value="domesticos">Serviços domésticos</option>
-                        <option value="outros">Outros serviços</option>
+                <div class="filtro-lista">
+                    <select name="filtro_tipo" id="filtro_tipo" onchange="ListaContatos()"  class="form-control">
+                        <option value="">-- Selecione o tipo de serviço --</option>
+                        <option value="Reformas">Reformas</option>
+                        <option value="Limpeza e conservação">Limpeza e conservação</option>
+                        <option value="Serviços domésticos">Serviços domésticos</option>
+                        <option value="Outros serviços">Outros serviços</option>
+                    </select>
+                </div>
+                <div class="filtro-lista">
+                    <select name="filtro_ocupacao" id="filtro_ocupacao" onchange="ListaContatos()"  class="form-control">
+                        <option value="">-- Selecione a ocupação --</option>
+                        <option value="Pedreiro">Pedreiro</option>
+                        <option value="Eletricista">Eletricista</option>
+                        <option value="Encanador">Encanador</option>
+                        <option value="Pintor">Pintor</option>
+                        <option value="Faxineiro(a)">Faxineiro(a)</option>
+                        <option value="Diarista">Diarista</option>
+                        <option value="Zelador">Zelador</option>
+                        <option value="Auxiliar de limpeza">Auxiliar de limpeza</option>
+                        <option value="Babá">Babá</option>
+                        <option value="Cozinheira">Cozinheira</option>
+                        <option value="Cuidador de idosos">Cuidador de idosos</option>
+                        <option value="Personal trainner">Personal trainner</option>
+                        <option value="Motorista">Motorista</option>
+                        <option value="Jardineiro">Jardineiro</option>
+                        <option value="Segurança particular">Segurança particular</option>
+                        <option value="Outros">Outros</option>
                     </select>
                 </div>
             </div>
         </form>
-
 
         <div class="row">
             <div class="col-sm-12">
@@ -128,8 +160,8 @@
                             <th scope="col">Celular</th>
                             <th scope="col">E-mail</th>
                             <th scope="col">Cidade</th>
-                            <th scope="col">Ocupação</th>
                             <th scope="col">Tipo de Serviço</th>
+                            <th scope="col">Ocupação</th>
                         </tr>
                     </thead>
                     <tbody id="table-contatos">
@@ -151,8 +183,9 @@
             let contatos =  db.contatos
            
             // Obtem os dados informados pelo usuário nos filtros
-            let fc = document.getElementById('filtro_cidade').value;
-            let fcg = document.getElementById('filtro_categoria').value;
+            let fcid = document.getElementById('filtro_cidade').value;
+            let ftip = document.getElementById('filtro_tipo').value;
+            let focp = document.getElementById('filtro_ocupacao').value;
 
             // limpa a lista de contatos apresentados
             $("#table-contatos").empty();
@@ -162,8 +195,9 @@
                 const contato = contatos[index];
 
                 // Verifica se os dados do contato batem com os filtros
-                if (((contato.cidade == fc) || (fc == '')) &&
-                    ((contato.categoria == fcg) || (fcg == ''))) {
+                if (((contato.cidade == fcid) || (fcid == '')) &&
+                    ((contato.tipo == ftip) || (ftip == '')) &&
+                    ((contato.ocupacao == focp) || (focp == ''))) {
                    
                     // Inclui o contato na tabela    
                     $("#table-contatos").append(`<tr><td scope="row">${contato.id}</td>
@@ -171,8 +205,8 @@
                                                     <td>${contato.celular}</td>
                                                     <td>${contato.email}</td>
                                                     <td>${contato.cidade}</td>
-                                                    <td>${contato.ocupacao}</td>
                                                     <td>${contato.tipo}</td>
+                                                    <td>${contato.ocupacao}</td>
                                                 </tr>`);
                 }
             }
@@ -188,13 +222,13 @@
 <footer class="rodape">
     <div class="icn_rodape">
         <a href="https://www.instagram.com/" target="_blank">
-        <img id="icnrod1" width="35" height="35" src="/src/index/imgs/instagram_icn.png">
+        <img id="icnrod1" width="35" height="35" src="/index/imgs/instagram_icn.png">
         </a>
         <a href="https://br.linkedin.com/" target="_blank">
-        <img id="icnrod2" width="35" height="35" src="/src/index/imgs/linkedin_icn.png">
+        <img id="icnrod2" width="35" height="35" src="/index/imgs/linkedin_icn.png">
         </a>
         <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g5-turma5/tree/main" target="_blank">
-        <img id="icnrod3" width="35" height="35" src="/src/index/imgs/github_icn.png">
+        <img id="icnrod3" width="35" height="35" src="/index/imgs/github_icn.png">
         </a>
     </div>
 </footer>
