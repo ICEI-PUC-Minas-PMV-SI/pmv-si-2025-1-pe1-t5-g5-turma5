@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSG - Cadastro de Prestador(a)</title>
 <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="/index/style.css">
+    <link rel="stylesheet" href="/src/index/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <style>
         * {font-family: "Inter", sans-serif;}
@@ -18,13 +18,13 @@
 
 <header class="cabecalho">
     <div class="logo">
-        <a href="/index/content/home.html">
-        <img id="logo" width="180" height="113" src="/index/imgs/logo.png">
+        <a href="/src/index/content/home.html">
+        <img id="logo" width="180" height="113" src="/src/index/imgs/logo.png">
         </a>
     </div>
     <div class="botoes">
-        <button id="btncab1" type="button" class="btn" onclick="document.location='/index/content/tutorial.html'">Passo a passo</button>
-        <button id="btncab2" type="button" class="btn" onclick="document.location='/index/login/login.html'">Entrar/Cadastrar</button>
+        <button id="btncab1" type="button" class="btn" onclick="document.location='/src/index/content/tutorial.html'">Passo a passo</button>
+        <button id="btncab2" type="button" class="btn" onclick="document.location='/src/index/login/login.html'">Entrar/Cadastrar</button>
     </div>
 </header>
 
@@ -161,6 +161,12 @@
             <label for="inputResumo" class="text-info">Resumo do prestador(a)</label><br>
             <input type="text" class="form-control" id="inputResumo" maxlength="300">
         </div>-->
+
+        <div>
+            <input required type="checkbox" name="checkbox-aceite" id="checkbox-aceite" required>
+            <label for="checkbox-aceite" class="checkbox-form">Concordo com os termos e política de privacidade</label><br>
+            <span id="span-termos">Leia nossos termos e política de privacidade.</span>
+        </div>
 
         <div id="botao-salvar">
         <input type="button" class="btn btn-success" id="btnInsert" value="Cadastrar">
@@ -335,13 +341,13 @@
 <footer class="rodape">
     <div class="icn_rodape">
         <a href="https://www.instagram.com/" target="_blank">
-        <img id="icnrod1" width="35" height="35" src="/index/imgs/instagram_icn.png">
+        <img id="icnrod1" width="35" height="35" src="/src/index/imgs/instagram_icn.png">
         </a>
         <a href="https://br.linkedin.com/" target="_blank">
-        <img id="icnrod2" width="35" height="35" src="/index/imgs/linkedin_icn.png">
+        <img id="icnrod2" width="35" height="35" src="/src/index/imgs/linkedin_icn.png">
         </a>
         <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g5-turma5/tree/main" target="_blank">
-        <img id="icnrod3" width="35" height="35" src="/index/imgs/github_icn.png">
+        <img id="icnrod3" width="35" height="35" src="/src/index/imgs/github_icn.png">
         </a>
     </div>
 </footer>
