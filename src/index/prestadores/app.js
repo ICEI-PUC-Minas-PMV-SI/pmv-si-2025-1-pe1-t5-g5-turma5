@@ -7,8 +7,8 @@ var db_contatos_inicial = {
             "cidade": "Belo Horizonte",
             "tipo": "Reformas",
             "email": "joaojp@csg.com.br",
-            "celular": "1-770-736-8031",
-            "ocupacao": "Marceneiro"
+            "celular": "(31) 99999-8888",
+            "ocupacao": "Eletricista"
         },
         {
             "id": 2,
@@ -16,8 +16,8 @@ var db_contatos_inicial = {
             "cidade": "Betim",
             "tipo": "Limpeza e conservação",
             "email": "mariasilva@csg.com.br",
-            "celular": "010-692-6593",
-            "ocupacao": "Diarista"
+            "celular": "(31) 99888-2222",
+            "ocupacao": "Faxineiro(a)"
         },
         {
             "id": 3,
@@ -25,7 +25,7 @@ var db_contatos_inicial = {
             "cidade": "Contagem",
             "tipo": "Serviços domésticos",
             "email": "regisantos@csg.com.br",
-            "celular": "1-463-123-4447",
+            "celular": "(31) 99777-2233",
             "ocupacao": "Babá"
         },
         {
@@ -34,8 +34,8 @@ var db_contatos_inicial = {
             "cidade": "Belo Horizonte",
             "tipo": "Outros serviços",
             "email": "jcpersonal@csg.com.br",
-            "celular": "493-170-9623 x156",
-            "ocupacao": "Personal Trainner"
+            "celular": "(31) 98899-4455",
+            "ocupacao": "Personal trainner"
         },
         {
             "id": 5,
@@ -43,7 +43,7 @@ var db_contatos_inicial = {
             "cidade": "Contagem",
             "tipo": "Reformas",
             "email": "cadu@csg.com.br",
-            "celular": "024-648-3804",
+            "celular": "(31) 99988-7766",
             "ocupacao": "Pintor"
         }
     ]
