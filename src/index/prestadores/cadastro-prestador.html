@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSG - Cadastro de Prestador(a)</title>
 <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="/src/index/style.css">
+    <link rel="stylesheet" href="/index/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <style>
         * {font-family: "Inter", sans-serif;}
@@ -18,13 +18,13 @@
 
 <header class="cabecalho">
     <div class="logo">
-        <a href="/src/index/content/home.html">
-        <img id="logo" width="180" height="113" src="/src/index/imgs/logo.png">
+        <a href="/index/content/home.html">
+        <img id="logo" width="180" height="113" src="/index/imgs/logo.png">
         </a>
     </div>
     <div class="botoes">
-        <button id="btncab1" type="button" class="btn" onclick="document.location='/src/index/content/tutorial.html'">Passo a passo</button>
-        <button id="btncab2" type="button" class="btn" onclick="document.location='/src/index/login/login.html'">Entrar/Cadastrar</button>
+        <button id="btncab1" type="button" class="btn" onclick="document.location='/index/content/tutorial.html'">Passo a passo</button>
+        <button id="btncab2" type="button" class="btn" onclick="document.location='/index/login/login.html'">Entrar/Cadastrar</button>
     </div>
 </header>
 
@@ -52,97 +52,116 @@
 
         <div class="form-group">
             <label for="inputNome" class="text-info">Nome completo</label>
-            <input type="text" class="form-control" id="inputNome" required>
+            <input type="text" class="form-control" id="inputNome" required placeholder="Nome completo">
         </div>
 
         <div class="form-group">
             <label for="inputEmail" class="text-info">E-mail</label>
-            <input type="email" class="form-control" id="inputEmail" required>
+            <input type="email" class="form-control" id="inputEmail" required placeholder="email@exemplo.com">
         </div>
 
         <div class="form-group">
             <label for="inputCelular" class="text-info">Celular</label>
-            <input type="text" class="form-control" id="inputCelular" required>
+            <input type="tel" class="form-control" id="inputCelular" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(99) 99999-9999" required title="Formato esperado: (99) 99999-9999">
         </div>
 
         <div class="form-group">
             <label for="inputCidade" class="text-info">Cidade</label>
-            <input type="text" class="form-control" id="inputCidade">
+            <select class="form-control" id="inputCidade" required>
+                <option value="">-- Selecione uma cidade --</option>
+                <option value="Belo Horizonte">Belo Horizonte</option>
+                <option value="Contagem">Contagem</option>
+                <option value="Betim">Betim</option>
+                <option value="Esmeraldas">Esmeraldas</option>
+                <option value="Ibirité">Ibirité</option>
+                <option value="Itaúna">Itaúna</option>
+                <option value="Lagoa Santa">Lagoa Santa</option>
+                <option value="Nova Lima">Nova Lima</option>
+                <option value="Pará de Minas">Pará de Minas</option>
+                <option value="Ribeirão das Neves">Ribeirão das Neves</option>
+                <option value="Santa Luzia">Santa Luzia</option>
+                <option value="Sete Lagoas">Sete Lagoas</option>
+                <option value="Vespasiano">Vespasiano</option>
+                <option value="Outros da Grande BH">Outros da Grande BH</option>
+                <option value="Outros de MG">Outros de MG</option>
+                <option value="Outros Estados">Outros Estados</option>
+            </select>
         </div>
+<!-- FORMATO ORIGINAL
+        <div class="form-group">
+            <label for="inputTipo" class="text-info">Tipo de Serviço</label>
+            <select type="text" class="form-control" id="inputTipo" required>
+                <option value="Reformas">Reformas</option>
+                <option value="Limpeza e conservação">Limpeza e conservação</option>
+                <option value="Serviços domésticos">Serviços domésticos</option>
+                <option value="Outros serviços">Outros serviços</option>
+            </select>
+        </div>
+
+
+
 
         <div class="form-group">
             <label for="inputOcupacao" class="text-info">Ocupação</label>
             <input type="text" class="form-control" id="inputOcupacao" required>
         </div>
+-->
+
+  <div class="form-group">
+    <label for="inputTipo" class="text-info">Tipo de Serviço</label>
+    <select class="form-control" id="inputTipo" required onchange="atualizarOcupacoes()">
+      <option value="">-- Selecione o tipo de serviço --</option>
+      <option value="Reformas">Reformas</option>
+      <option value="Limpeza e conservação">Limpeza e conservação</option>
+      <option value="Serviços domésticos">Serviços domésticos</option>
+      <option value="Outros serviços">Outros serviços</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="inputOcupacao" class="text-info">Ocupação</label>
+    <select class="form-control" id="inputOcupacao" required>
+      <option value="">-- Selecione uma ocupação --</option>
+    </select>
+  </div>
+
+  <script>
+    const ocupacoes = {
+      "Reformas": ["Pedreiro", "Eletricista", "Encanador", "Pintor"],
+      "Limpeza e conservação": ["Faxineiro(a)", "Diarista", "Zelador", "Auxiliar de limpeza"],
+      "Serviços domésticos": ["Babá", "Cozinheira", "Cuidador de idosos"],
+      "Outros serviços": ["Personal trainner", "Motorista", "Jardineiro", "Segurança particular"]
+    };
+
+    function atualizarOcupacoes() {
+      const tipo = document.getElementById("inputTipo").value;
+      const ocupacao = document.getElementById("inputOcupacao");
+
+      // Limpa opções anteriores
+      ocupacao.innerHTML = '<option value="">-- Selecione uma ocupação --</option>';
+
+      // Adiciona novas opções se houver
+      if (ocupacoes[tipo]) {
+        ocupacoes[tipo].forEach(function(item) {
+          const option = document.createElement("option");
+          option.value = item;
+          option.textContent = item;
+          ocupacao.appendChild(option);
+        });
+      }
+    }
+  </script>
+
+<!--
+        <div id="msg-prestador">
+            Prestador(a), caso queira, descreva um resumo sobre você e os serviços que você oferece.
+        </div>
 
         <div class="form-group">
-            <label for="inputTipo" class="text-info">Tipo de Serviço</label>
-            <input type="text" class="form-control" id="inputTipo" required>
-        </div>
+            <label for="inputResumo" class="text-info">Resumo do prestador(a)</label><br>
+            <input type="text" class="form-control" id="inputResumo" maxlength="300">
+        </div>-->
 
-        <div id="msg-prestador">
-            Prestador(a), caso queira, descreva maiores informações sobre os serviços que você oferece (até 4 serviços).
-        </div>
-
-        <div id="servico1" class="form-group">
-            <div>
-                    <label for="servico1-cadastro" class="servico-cadastro">Serviço 1</label><br>
-                    <input type="text" name="servico1" id="servico-cadastro">
-            </div>
-            <div id="valor1">
-                    <label for="valor1-cadastro" class="servico-cadastro">Valor estimado por hora</label><br>
-                    <input type="number" name="valor1" id="valor-cadastro">
-            </div>
-            <div id="tempo1">
-                    <label for="tempo1-cadastro" class="servico-cadastro">Tempo médio estimado em horas</label><br>
-                    <input type="time" name="tempo1" id="tempo-cadastro">
-            </div>
-        </div>
-
-        <div id="servico2">
-            <div>
-                    <label for="servico2-cadastro" class="servico-cadastro">Serviço 2</label><br>
-                    <input type="text" name="servico2" id="servico-cadastro">
-            </div>
-            <div id="valor2">
-                    <label for="valor2-cadastro" class="servico-cadastro">Valor estimado por hora</label><br>
-                    <input type="number" name="valor2" id="valor-cadastro">
-            </div>
-            <div id="tempo2">
-                    <label for="tempo2-cadastro" class="servico-cadastro">Tempo médio estimado em horas</label><br>
-                    <input type="time" name="tempo2" id="tempo-cadastro">
-            </div>
-        </div>
-
-        <div id="servico3">
-            <div>
-                    <label for="servico3-cadastro" class="servico-cadastro">Serviço 3</label><br>
-                    <input type="text" name="servico3" id="servico-cadastro">
-            </div>
-            <div id="valor3">
-                    <label for="valor3-cadastro" class="servico-cadastro">Valor estimado por hora</label><br>
-                    <input type="number" name="valor3" id="valor-cadastro">
-            </div>
-            <div id="tempo3">
-                    <label for="tempo3-cadastro" class="servico-cadastro">Tempo médio estimado em horas</label><br>
-                    <input type="time" name="tempo3" id="tempo-cadastro">
-            </div>
-        </div>
-
-        <div id="servico4">
-            <div>
-                    <label for="servico4-cadastro" class="servico-cadastro">Serviço 4</label><br>
-                    <input type="text" name="servico4" id="servico-cadastro">
-            </div>
-            <div id="valor4">
-                    <label for="valor4-cadastro" class="servico-cadastro">Valor estimado por hora</label><br>
-                    <input type="number" name="valor4" id="valor-cadastro">
-            </div>
-            <div id="tempo4">
-                    <label for="tempo4-cadastro" class="servico-cadastro">Tempo médio estimado em horas</label><br>
-                    <input type="time" name="tempo4" id="tempo-cadastro">
-            </div>
-        </div>
         <div id="botao-salvar">
         <input type="button" class="btn btn-success" id="btnInsert" value="Cadastrar">
 <!--        <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
@@ -201,8 +220,8 @@
                 let contato = contatos[i]
                 $("#table-contatos").append(`<tr><td scope="row">${contato.id}</td>
                                                 <td>${contato.nome}</td>
-                                                <td>${contato.celular}</td>
                                                 <td>${contato.email}</td>
+                                                <td>${contato.celular}</td>
                                                 <td>${contato.cidade}</td>
                                                 <td>${contato.ocupacao}</td>
                                                 <td>${contato.tipo}</td>
@@ -223,8 +242,8 @@
                 // Cria contato a partir dos valores dos campos do formulário
                 let contato = {
                     nome: $("#inputNome").val(),
-                    celular: $("#inputCelular").val(),
                     email: $("#inputEmail").val(),
+                    celular: $("#inputCelular").val(),
                     cidade: $("#inputCidade").val(),
                     ocupacao: $("#inputOcupacao").val(),
                     tipo: $('#inputTipo').val()
@@ -316,13 +335,13 @@
 <footer class="rodape">
     <div class="icn_rodape">
         <a href="https://www.instagram.com/" target="_blank">
-        <img id="icnrod1" width="35" height="35" src="/src/index/imgs/instagram_icn.png">
+        <img id="icnrod1" width="35" height="35" src="/index/imgs/instagram_icn.png">
         </a>
         <a href="https://br.linkedin.com/" target="_blank">
-        <img id="icnrod2" width="35" height="35" src="/src/index/imgs/linkedin_icn.png">
+        <img id="icnrod2" width="35" height="35" src="/index/imgs/linkedin_icn.png">
         </a>
         <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g5-turma5/tree/main" target="_blank">
-        <img id="icnrod3" width="35" height="35" src="/src/index/imgs/github_icn.png">
+        <img id="icnrod3" width="35" height="35" src="/index/imgs/github_icn.png">
         </a>
     </div>
 </footer>
