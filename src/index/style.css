@@ -5,6 +5,7 @@
 html, body {
     height: 100vh;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -997,3 +998,5 @@ h2 {
 .filtro-lista {
     display: inline-flex;
 }
+
+
