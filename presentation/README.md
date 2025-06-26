@@ -10,7 +10,8 @@
 
    CSG
 
-   https://sgapucminasbr-my.sharepoint.com/personal/1596617_sga_pucminas_br/_layouts/15/guestaccess.aspx?share=ESsM42qzOYhDpKNxoeeqMJEBB0yYqMSxdgizNhxt5fAIQQ&e=XYNBJh
+   https://sgapucminasbr-my.sharepoint.com/personal/1596617_sga_pucminas_br/_layouts/15/guestaccess.aspx?share=Eczrq74xZ9RFh243QaUCAWMBynVNPorW9ufQ35GAOMa0dA&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OocGNG
+
 
 5. Vídeo de apresentação das funcionalidades
    
